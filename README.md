@@ -16,4 +16,9 @@ npm run fuzz
 Coverage report before we applied fuzz testing can be found [here](https://github.ncsu.edu/DevOps-Milestones/DevOps-M2/blob/master/sun1.pdf)  
 After the fuzz testing, we got a better coverage, see [here] (https://github.ncsu.edu/DevOps-Milestones/DevOps-M2/blob/master/sun2.pdf)
 
-![](https://github.ncsu.edu/DevOps-Milestones/DevOps-M2/blob/master/sun_fuzz.png)
+![](https://github.ncsu.edu/DevOps-Milestones/DevOps-M2/blob/master/sun_fuzz.png)  
+(up: test suite ouput; down: using the fuzz test)
+
+The following figure shows the coverage status from Line 44 thru line 88 before and after the fuzz testing.
+![](https://github.ncsu.edu/DevOps-Milestones/DevOps-M2/blob/master/sun_detail.png)  
+(left: test suite ouput(before fuzz testing); right: after the fuzz testing)
