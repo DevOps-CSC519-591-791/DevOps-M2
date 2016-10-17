@@ -80,8 +80,34 @@ Coverage report before we applied fuzz testing can be found [here](https://githu
 After the fuzz testing, we got a better coverage, see [here] (https://github.ncsu.edu/DevOps-Milestones/DevOps-M2/blob/master/sun2.pdf).
 
 ![](https://github.ncsu.edu/DevOps-Milestones/DevOps-M2/blob/master/sun_fuzz.png)  
-(up: original test suite ouput; down: coverage comparison before and after the fuzz testing)
+(up: sun.js coverage info before and after the fuzz testing; down: sun.js coverage details before and after the fuzz testing)
 
 The following figure shows the coverage status from Line 44 through line 88 before and after the fuzz testing.
 ![](https://github.ncsu.edu/DevOps-Milestones/DevOps-M2/blob/master/sun_detail.png)  
 (left: test suite ouput before fuzz testing; right: test suite output after fuzz testing)
+
+### Analysis Section
+#### Basic Analysis: `The ability to run an existing static analysis tool on the source code and report its findings.`
+We use [ESlint](https://github.com/eslint/eslint) as the static analysis tool. ESLint is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code. In many ways, it is similar to JSLint and JSHint.
+You can run the ESlint easily and check the quality of source code.The command is below.
+```
+npm run lint
+```
+Then you will get the output from terminal.
+```
+src/moon.js
+  302:11  warning  i is already defined      no-redeclare
+  303:8   warning  Eterm is already defined  no-redeclare
+
+✖ 2 problems (0 errors, 2 warnings)
+```
+The output shows 2 warnings existing in moon.js saying two variables are already defined. One more thing, ESLint is designed to be completely configurable. And we can change its configuration by modifying [.eslintrc](https://github.ncsu.edu/DevOps-Milestones/solar-calc/blob/master/.eslintrc) file.
+
+#### Custom Metrics: `The ability to implement custom source metrics`
+We created a file named [custom_metrics.js](https://github.ncsu.edu/DevOps-Milestones/solar-calc/blob/master/custom_metrics.js). And we implemented several custom metrics by using `esprima`. They are
+ - Max condition: Count the max number of conditions within an if statement in a function;
+ - Long method: Here we defined that if one method is more than 20 LOC, it is a long method;
+ - SimpleCyclomaticComplexity: Number of if statements/loops + 1;
+ - Duplicate code detection:
+
+#### Gates: `Using hooks to reject a commit if it fails a minimum testing criteria and analysis criteria`
