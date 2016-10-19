@@ -2,6 +2,9 @@
 It's repo for DevOps Milestone 2.
 We use [solar-calc](https://github.ncsu.edu/DevOps-Milestones/solar-calc) as our open-source project. It is a sunrise and sunset calculator for npm based on the NOAA Solar Calculator.
 
+ - Open-source project: [link](https://github.ncsu.edu/DevOps-Milestones/solar-calc)
+ - Screencast: link
+
 ### Prerequisite
 At very beginning, you need to clone the repository and install the necessary packages.
 Here are commands.
@@ -190,10 +193,11 @@ The script will also check the duplicated code from source code. As you can see,
  ```
 
 #### Gates: `Using hooks to reject a commit if it fails a minimum testing criteria and analysis criteria`
-If Statement coverage is less than 96%, commit will be refused.  
-If errors exist, commit will be refused.  
-If warnings exist, commit will be refused.  
-
+We created a `pre-commit` hook to make sure source code following testing criteria and analysis criteria. The rules are listed below.
+ - If Statement coverage is less than 95.5%, commit will be refused.  
+ - If errors exist, commit will be refused.  
+ - If warnings exist, commit will be refused.  
+Below is the content of this pre-commit hook.
 ```shell
 #!/bin/sh
 echo "Start pre-commit"
@@ -246,4 +250,15 @@ fi
 
 echo "End pre-commit"
 exit 0
+```
+And we also used Jenkins `Post build task` plugin to run another [analysing script](https://github.ncsu.edu/DevOps-Milestones/solar-calc/blob/master/post_build.py) and generate a simple report. Below is the content of this report.
+```
+========== Analysis Report ==========
+Statement Coverage: 96, good job!
+No error or warning
+========== End of Report ==========
+
+POST BUILD TASK : SUCCESS
+END OF POST BUILD TASK : 0
+Finished: SUCCESS
 ```
