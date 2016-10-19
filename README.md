@@ -3,7 +3,7 @@ It's repo for DevOps Milestone 2.
 We use [solar-calc](https://github.ncsu.edu/DevOps-Milestones/solar-calc) as our open-source project. It is a sunrise and sunset calculator for npm based on the NOAA Solar Calculator.
 
  - Open-source project: [link](https://github.ncsu.edu/DevOps-Milestones/solar-calc)
- - Screencast: link
+ - Screencast: [link](https://youtu.be/wGa4Z-wqgxs)
 
 ### Prerequisite
 At very beginning, you need to clone the repository and install the necessary packages.
