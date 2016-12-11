@@ -72,7 +72,7 @@ open coverage/lcov-report/solar-calc/lib/index.html
 
 #### Advanced Testing: `Fuzz testing sun.js`
 Although we've tested the project in step 1, we found that in `sun.js`, some statements and branches are not covered.  
-Consequently, we applied the fuzz testing to `sun.js`. The test cases were added into the original test suite which we used in step 1. Scripts of fuzz testing is in [test/fuzz.js](https://github.ncsu.edu/DevOps-Milestones/solar-calc/blob/master/test/fuzz.js).
+Consequently, we applied the fuzz testing to `sun.js`. The test cases were added into the original test suite which we used in step 1. Scripts of fuzz testing is in [test/fuzz.js](https://github.com/DevOps-CSC519-591-791/M2-M4-app-solar-calc/blob/master/test/fuzz.js).
 
 To run fuzz testing, you need to type the command below.
 ```
@@ -80,7 +80,7 @@ npm run fuzz
 ```
 
 Coverage report before we applied fuzz testing can be found [here](/sun1.pdf).  
-After the fuzz testing, we got a better coverage, see [here] (https://github.ncsu.edu/DevOps-Milestones/DevOps-M2/blob/master/sun2.pdf).
+After the fuzz testing, we got a better coverage, see [here](/sun2.pdf).
 
 ![](/sun_fuzz.png)  
 (up: sun.js coverage info before and after the fuzz testing; down: sun.js coverage details before and after the fuzz testing)
@@ -104,10 +104,10 @@ src/moon.js
 
 ✖ 2 problems (0 errors, 2 warnings)
 ```
-The output shows 2 warnings existing in moon.js saying two variables are already defined. One more thing, ESLint is designed to be completely configurable. And we can change its configuration by modifying [.eslintrc](https://github.ncsu.edu/DevOps-Milestones/solar-calc/blob/master/.eslintrc) file.
+The output shows 2 warnings existing in moon.js saying two variables are already defined. One more thing, ESLint is designed to be completely configurable. And we can change its configuration by modifying [.eslintrc](https://github.com/DevOps-CSC519-591-791/M2-M4-app-solar-calc/blob/master/.eslintrc) file.
 
 #### Custom Metrics: `The ability to implement custom source metrics`
-We created a file named [custom_metrics.js](https://github.ncsu.edu/DevOps-Milestones/solar-calc/blob/master/custom_metrics.js). And we implemented several custom metrics by using `esprima`. They are
+We created a file named [custom_metrics.js](https://github.com/DevOps-CSC519-591-791/M2-M4-app-solar-calc/blob/master/custom_metrics.js). And we implemented several custom metrics by using `esprima`. They are
  - Max condition: Count the max number of conditions within an if statement in a function;
  - Long method: Here we defined that if one method is more than 20 LOC, it is a long method;
  - SimpleCyclomaticComplexity: Number of if statements/loops + 1;
@@ -251,7 +251,7 @@ fi
 echo "End pre-commit"
 exit 0
 ```
-And we also used Jenkins `Post build task` plugin to run another [analysing script](https://github.ncsu.edu/DevOps-Milestones/solar-calc/blob/master/post_build.py) and generate a simple report. Below is the content of this report.
+And we also used Jenkins `Post build task` plugin to run another [analysing script](https://github.com/DevOps-CSC519-591-791/M2-M4-app-solar-calc/blob/master/post_build.py) and generate a simple report. Below is the content of this report.
 ```
 ========== Analysis Report ==========
 Statement Coverage: 96, good job!
