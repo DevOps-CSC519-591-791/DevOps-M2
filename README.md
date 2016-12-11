@@ -1,15 +1,15 @@
 # DevOps-M2
 It's repo for DevOps Milestone 2.
-We use [solar-calc](https://github.ncsu.edu/DevOps-Milestones/solar-calc) as our open-source project. It is a sunrise and sunset calculator for npm based on the NOAA Solar Calculator.
+We use [solar-calc](https://github.com/DevOps-CSC519-591-791/M2-M4-app-solar-calc) as our open-source project. It is a sunrise and sunset calculator for npm based on the NOAA Solar Calculator.
 
- - Open-source project: [link](https://github.ncsu.edu/DevOps-Milestones/solar-calc)
+ - Open-source project: [link](https://github.com/DevOps-CSC519-591-791/M2-M4-app-solar-calc)
  - Screencast: [link](https://youtu.be/wGa4Z-wqgxs)
 
 ### Prerequisite
 At very beginning, you need to clone the repository and install the necessary packages.
 Here are commands.
 ```
-git clone https://github.ncsu.edu/DevOps-Milestones/solar-calc
+git clone https://github.com/DevOps-CSC519-591-791/M2-M4-app-solar-calc
 sudo npm install
 ```
 
@@ -79,14 +79,14 @@ To run fuzz testing, you need to type the command below.
 npm run fuzz
 ```
 
-Coverage report before we applied fuzz testing can be found [here](https://github.ncsu.edu/DevOps-Milestones/DevOps-M2/blob/master/sun1.pdf).  
+Coverage report before we applied fuzz testing can be found [here](/sun1.pdf).  
 After the fuzz testing, we got a better coverage, see [here] (https://github.ncsu.edu/DevOps-Milestones/DevOps-M2/blob/master/sun2.pdf).
 
-![](https://github.com/DevOps-CSC519-591-791/DevOps-M2/blob/master/sun_fuzz.png)  
+![](/sun_fuzz.png)  
 (up: sun.js coverage info before and after the fuzz testing; down: sun.js coverage details before and after the fuzz testing)
 
 The following figure shows the coverage status from Line 44 through line 88 before and after the fuzz testing.
-![](https://github.com/DevOps-CSC519-591-791/DevOps-M2/blob/master/sun_detail.png)  
+![](/sun_detail.png)  
 (left: test suite ouput before fuzz testing; right: test suite output after fuzz testing)
 
 ### Analysis Section
